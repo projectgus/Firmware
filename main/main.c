@@ -176,14 +176,14 @@ display_picture(int picture_id, int selected_lut)
 
 void
 app_main(void) {
-	badge_check_first_run();
+  //badge_check_first_run();
 	badge_init();
 
 	esp_err_t err = badge_eink_fb_init();
 	assert( err == ESP_OK );
 
   int picture_id = 0;
-#if 0
+#if 1
 	// simple test-mode
 	ets_printf("start drawing image\n");
 	display_picture(picture_id, -1);

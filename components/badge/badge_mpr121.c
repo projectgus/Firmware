@@ -293,6 +293,8 @@ badge_mpr121_init(void)
 {
 	static bool badge_mpr121_init_done = false;
 
+	return ESP_OK;
+
 	if (badge_mpr121_init_done)
 		return ESP_OK;
 

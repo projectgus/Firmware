@@ -17,11 +17,23 @@
 #define PIN_NUM_BUTTON_LEFT  33
 #define PIN_NUM_BUTTON_RIGHT 35
 
+#if 0 // SHA badge
 #define PIN_NUM_EPD_CLK       5
 #define PIN_NUM_EPD_MOSI     17
 #define PIN_NUM_EPD_CS       18
 #define PIN_NUM_EPD_DATA     19
 #define PIN_NUM_EPD_RESET    23
+
+#else // MVB
+
+#define PIN_NUM_EPD_CLK      33
+#define PIN_NUM_EPD_MOSI     32
+#define PIN_NUM_EPD_CS       27
+#define PIN_NUM_EPD_DATA     25
+#define PIN_NUM_EPD_RESET    26
+
+#endif
+
 #define PIN_NUM_EPD_BUSY     21
 
 #define PIN_NUM_SD_CD        16

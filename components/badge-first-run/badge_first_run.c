@@ -439,7 +439,7 @@ badge_first_run(void)
 	err = badge_mpr121_init();
 	assert( err == ESP_OK );
 	err = badge_mpr121_configure(NULL, false);
-	assert( err == ESP_OK );
+	//assert( err == ESP_OK );
 
 	disp_line("reading touch data.",0);
 	int i;
@@ -579,7 +579,7 @@ badge_first_run(void)
 	// sdcard detect (not expecting an sd-card)
 	disp_line("read sdcard-detect line.",0);
 	err = badge_sdcard_init();
-	assert( err == ESP_OK );
+	//assert( err == ESP_OK );
 	bool sdcard = badge_sdcard_detected();
 	if (sdcard) {
 		disp_line("sdcard detected. (error)",FONT_MONOSPACE);
