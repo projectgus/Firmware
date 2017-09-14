@@ -368,15 +368,19 @@ badge_eink_init(enum badge_eink_dev_t dev_type)
 		/* initialize GDEH029A1 */
 
 		// Hardware reset
+	  printf("reset...\n");
 		badge_eink_dev_reset();
 
 		// Software reset
+		printf("softreset...\n");
 		badge_eink_dev_write_command(0x12);
 
 		// 0C: booster soft start control
+		printf("booster soft start...\n");
 		badge_eink_dev_write_command_p3(0x0c, 0xd7, 0xd6, 0x9d);
 
 		// 2C: write VCOM register
+		printf("write VCOM...\n");
 		badge_eink_dev_write_command_p1(0x2c, 0xa8); // VCOM 7c
 
 		// 11: data entry mode setting

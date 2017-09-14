@@ -23,18 +23,18 @@
 #define PIN_NUM_EPD_CS       18
 #define PIN_NUM_EPD_DATA     19
 #define PIN_NUM_EPD_RESET    23
+#define PIN_NUM_EPD_BUSY     21
 
 #else // MVB
 
-#define PIN_NUM_EPD_CLK      33
-#define PIN_NUM_EPD_MOSI     32
-#define PIN_NUM_EPD_CS       27
-#define PIN_NUM_EPD_DATA     25
-#define PIN_NUM_EPD_RESET    26
+#define PIN_NUM_EPD_CLK      18
+#define PIN_NUM_EPD_MOSI     19
+#define PIN_NUM_EPD_CS       5
+#define PIN_NUM_EPD_DATA     17
+#define PIN_NUM_EPD_RESET    16
+#define PIN_NUM_EPD_BUSY     4
 
 #endif
-
-#define PIN_NUM_EPD_BUSY     21
 
 #define PIN_NUM_SD_CD        16
 #define PIN_NUM_SD_CLK       14

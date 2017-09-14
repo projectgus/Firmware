@@ -3,6 +3,7 @@
 #include "esp_event_loop.h"
 #include "esp_system.h"
 #include "esp_wifi.h"
+#include "esp_log.h"
 #include <font.h>
 #include <string.h>
 
@@ -42,6 +43,8 @@ struct menu_item {
 #include "demo_power.h"
 #include "demo_mpr121.h"
 #include "demo_sdcard_image.h"
+
+static const char *TAG = "main";
 
 const struct menu_item demoMenu[] = {
 #ifdef I2C_MPR121_ADDR
@@ -177,11 +180,12 @@ display_picture(int picture_id, int selected_lut)
 void
 app_main(void) {
   //badge_check_first_run();
-	badge_init();
-
+  badge_init();
+	ESP_LOGI(TAG, "fb_init...");
 	esp_err_t err = badge_eink_fb_init();
 	assert( err == ESP_OK );
 
+	ESP_LOGI(TAG, "???");
   int picture_id = 0;
 #if 1
 	// simple test-mode

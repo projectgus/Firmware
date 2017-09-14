@@ -11,6 +11,7 @@
 #include <rom/gpio.h>
 #include <freertos/FreeRTOS.h>
 #include <freertos/semphr.h>
+#include <freertos/task.h>
 #include <soc/gpio_reg.h>
 #include <soc/gpio_sig_map.h>
 #include <soc/gpio_struct.h>
