@@ -1,5 +1,4 @@
 build/
-sdkconfig*
 makeenv
 custom_env.sh
 doxygen/

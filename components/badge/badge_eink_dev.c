@@ -149,13 +149,6 @@ badge_eink_dev_init(enum badge_eink_dev_t dev_type)
 	if (res != ESP_OK)
 		return res;
 
-#ifdef PIN_NUM_LED
-	gpio_pad_select_gpio(PIN_NUM_LED);
-	res = gpio_set_direction(PIN_NUM_LED, GPIO_MODE_OUTPUT);
-	if (res != ESP_OK)
-		return res;
-#endif // PIN_NUM_LED
-
 	badge_eink_dev_intr_trigger = xSemaphoreCreateBinary();
 	if (badge_eink_dev_intr_trigger == NULL)
 		return ESP_ERR_NO_MEM;
